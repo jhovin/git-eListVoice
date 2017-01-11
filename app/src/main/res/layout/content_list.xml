@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.kevinpc.elistvoice.ListActivity"
+    tools:showIn="@layout/activity_list"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    >
+
+ <ProgressBar
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:id="@+id/progressBar"
+     android:visibility="gone"/>
+
+ <!--<EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/edtNome"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"
+        android:layout_alignEnd="@+id/txtTitulo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lista:"
+        android:textColor="@color/Black"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_alignParentStart="true" /> -->
+
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:id="@+id/scrollView"
+     android:layout_alignParentEnd="true"
+     android:layout_alignParentBottom="true" >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+   <RelativeLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentEnd="true"
+       android:layout_marginBottom="63dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome0"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtNome0"
+        android:autoText="false"
+        android:theme="@style/AppTheme2"
+        android:padding="5dp"
+        android:background="@drawable/rounded_button_login"
+        android:singleLine="true"
+        android:layout_below="@+id/txtNome0"
+        android:layout_alignParentStart="true"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtNome"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome"
+        android:layout_below="@+id/edtNome0"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco"
+        android:background="@drawable/rounded_button_login"
+        android:inputType="textNoSuggestions|number"
+        android:layout_below="@+id/txtPreco"
+        android:layout_alignParentEnd="true"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco"
+        android:textColor="@color/white"
+        android:layout_above="@+id/edtNome"
+        android:layout_alignStart="@+id/edtPreco3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome2"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco2"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtPreco2"
+        android:layout_alignStart="@+id/edtPreco"
+        android:inputType="textNoSuggestions|number"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco2"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome"
+        android:layout_alignStart="@+id/txtPreco" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome2"
+        android:background="@drawable/rounded_button_login"
+        android:layout_alignTop="@+id/edtPreco2"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome3"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtNome3"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco3"
+        android:background="@drawable/rounded_button_login"
+        android:layout_alignTop="@+id/edtNome3"
+        android:layout_alignParentEnd="true"
+        android:inputType="textNoSuggestions|number"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco3"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtPreco2"
+        android:layout_alignStart="@+id/edtPreco3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome3"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome2"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome4"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtNome4"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco4"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtPreco4"
+        android:layout_alignParentEnd="true"
+        android:inputType="textNoSuggestions|number"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco4"
+        android:textColor="@color/white"
+        android:layout_alignTop="@+id/txtNome4"
+        android:layout_alignStart="@+id/edtPreco3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome4"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome3"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome5"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtNome5"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco5"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtPreco5"
+        android:layout_alignParentEnd="true"
+        android:inputType="textNoSuggestions|number"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco5"
+        android:textColor="@color/white"
+        android:layout_alignTop="@+id/txtNome5"
+        android:layout_alignStart="@+id/edtPreco4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome5"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome4"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome6"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtNome6"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco6"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtPreco6"
+        android:layout_alignStart="@+id/txtPreco6"
+        android:inputType="textNoSuggestions|number"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco6"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtPreco5"
+        android:layout_alignStart="@+id/edtPreco5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome6"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome5"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome7"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtNome7"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco7"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtPreco7"
+        android:layout_alignStart="@+id/txtPreco7"
+        android:inputType="textNoSuggestions|number"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco7"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtPreco6"
+        android:layout_alignStart="@+id/edtPreco6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome7"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome6"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome8"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome7"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco8"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtPreco7"
+        android:layout_alignStart="@+id/edtPreco7" />
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome8"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtNome8"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco8"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtPreco8"
+        android:layout_alignStart="@+id/txtPreco8"
+        android:inputType="textNoSuggestions|number"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome9"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome8"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco9"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtPreco8"
+        android:layout_alignStart="@+id/edtPreco8" />
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome9"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtNome9"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco9"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtPreco9"
+        android:layout_alignStart="@+id/txtPreco9"
+        android:inputType="textNoSuggestions|number"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome10"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome9"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco10"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtPreco9"
+        android:layout_alignStart="@+id/edtPreco7" />
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome10"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtNome10"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco10"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtPreco10"
+        android:layout_alignStart="@+id/txtPreco10"
+        android:inputType="textNoSuggestions|number"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome11"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome10"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco11"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtPreco10"
+        android:layout_alignStart="@+id/edtPreco7" />
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome11"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtNome11"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco11"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtPreco11"
+        android:layout_alignStart="@+id/txtPreco11"
+        android:inputType="textNoSuggestions|number"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome12"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome11"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco12"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtPreco11"
+        android:layout_alignStart="@+id/edtPreco7" />
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome12"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtNome12"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco12"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtPreco12"
+        android:layout_alignStart="@+id/txtPreco12"
+        android:inputType="textNoSuggestions|number"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nome:"
+        android:id="@+id/txtNome13"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtNome12"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco13"
+        android:textColor="@color/white"
+        android:layout_below="@+id/edtPreco12"
+        android:layout_alignStart="@+id/edtPreco7" />
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/edtNome13"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtNome13"
+        android:layout_alignParentStart="true"
+        android:inputType="textNoSuggestions|textVisiblePassword"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco13"
+        android:background="@drawable/rounded_button_login"
+        android:layout_below="@+id/txtPreco13"
+        android:layout_alignStart="@+id/txtPreco13"
+        android:inputType="textNoSuggestions|number"
+        android:maxLength="29"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:id="@+id/edtPreco0"
+        android:background="@drawable/rounded_button_login"
+        android:inputType="textNoSuggestions|number"
+        android:layout_alignTop="@+id/edtNome0"
+        android:layout_alignParentEnd="true"
+        android:maxLength="29"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/string_preco"
+        android:id="@+id/txtPreco0"
+        android:textColor="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/edtPreco0" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView0"
+        android:background="@drawable/checked"
+        android:layout_marginStart="4dp"
+        android:layout_above="@+id/edtNome0"
+        android:layout_toEndOf="@+id/txtNome0"
+        android:layout_marginBottom="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome"
+        android:layout_toEndOf="@+id/txtNome"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView2"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome2"
+        android:layout_toEndOf="@+id/txtNome2"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView3"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome3"
+        android:layout_toEndOf="@+id/txtNome3"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView4"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome4"
+        android:layout_toEndOf="@+id/txtNome4"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView5"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome5"
+        android:layout_toEndOf="@+id/txtNome5"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView6"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome6"
+        android:layout_toEndOf="@+id/txtNome6"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView7"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome7"
+        android:layout_toEndOf="@+id/txtNome7"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView8"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome8"
+        android:layout_toEndOf="@+id/txtNome8"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView9"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome9"
+        android:layout_toEndOf="@+id/txtNome9"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView10"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome10"
+        android:layout_toEndOf="@+id/txtNome10"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView11"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome11"
+        android:layout_toEndOf="@+id/txtNome11"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView12"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome12"
+        android:layout_toEndOf="@+id/txtNome12"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:id="@+id/imageView13"
+        android:background="@drawable/checked"
+        android:layout_alignBottom="@+id/txtNome13"
+        android:layout_toEndOf="@+id/txtNome13"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp" />
+
+
+   </RelativeLayout>
+  </LinearLayout>
+ </ScrollView>
+
+ <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Titulo"
+        android:id="@+id/textView4"
+        android:textColor="@color/white" />
+
+ <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTitulo"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:autoText="false"
+        android:layout_marginBottom="10dp"
+        android:theme="@style/AppTheme2"
+        android:padding="5dp"
+        android:background="@color/white"
+        android:singleLine="true"
+        android:inputType="textCapWords|textCapSentences|textCapCharacters" />
+
+ <EditText
+     android:layout_width="200dp"
+     android:layout_height="30dp"
+     android:ems="10"
+     android:id="@+id/edtNome"
+     android:background="@color/white"
+     android:layout_below="@+id/textView3"
+     android:layout_alignParentStart="true"
+     android:inputType="textNoSuggestions|textVisiblePassword"/>
+
+ <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAppearance="?android:attr/textAppearanceSmall"
+         android:text="Nome:"
+         android:id="@+id/textView3"
+         android:layout_below="@+id/txtTitulo"
+         android:layout_alignParentStart="true"
+         android:textColor="@color/white" />
+
+ <EditText
+         android:layout_width="100dp"
+         android:layout_height="30dp"
+         android:id="@+id/edtPreco"
+         android:background="@color/white"
+         android:layout_below="@+id/textView3"
+         android:layout_alignEnd="@+id/txtTitulo"
+         android:inputType="textNoSuggestions|number"/>
+
+ <TextView
+         android:layout_width="50dp"
+         android:layout_height="wrap_content"
+         android:text="@string/string_preco"
+         android:id="@+id/txtPreco"
+         android:layout_above="@+id/edtPreco"
+         android:layout_alignStart="@+id/edtPreco"
+         android:textColor="@color/white"
+         />
+
+ <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAppearance="?android:attr/textAppearanceSmall"
+         android:text="Nome:"
+         android:id="@+id/txtNome2"
+         android:textColor="@color/white"
+         android:layout_below="@+id/edtNome"
+         android:layout_alignParentStart="true" />
+
+ <EditText
+         android:layout_width="100dp"
+         android:layout_height="30dp"
+         android:id="@+id/edtPreco2"
+         android:background="@color/white"
+         android:layout_below="@+id/txtPreco2"
+         android:layout_alignStart="@+id/edtPreco"
+         android:inputType="textNoSuggestions|number"/>
+
+ <TextView
+         android:layout_width="50dp"
+         android:layout_height="wrap_content"
+         android:text="@string/string_preco"
+         android:id="@+id/txtPreco2"
+         android:textColor="@color/white"
+         android:layout_below="@+id/edtPreco"
+         android:layout_alignStart="@+id/edtPreco2" />
+
+ <EditText
+         android:layout_width="200dp"
+         android:layout_height="30dp"
+         android:ems="10"
+         android:id="@+id/edtNome2"
+         android:background="@color/white"
+         android:layout_alignTop="@+id/edtPreco2"
+         android:layout_alignParentStart="true"
+         android:inputType="textNoSuggestions|textVisiblePassword"/>
+
+ <EditText
+         android:layout_width="200dp"
+         android:layout_height="30dp"
+         android:ems="10"
+         android:id="@+id/edtNome3"
+         android:background="@color/white"
+         android:layout_below="@+id/txtNome3"
+         android:layout_alignParentStart="true"
+         android:inputType="textNoSuggestions|textVisiblePassword"/>
+
+ <EditText
+         android:layout_width="100dp"
+         android:layout_height="30dp"
+         android:id="@+id/edtPreco3"
+         android:background="@color/white"
+         android:layout_alignTop="@+id/edtNome3"
+         android:layout_alignParentEnd="true"
+         android:inputType="textNoSuggestions|number"/>
+
+ <TextView
+         android:layout_width="50dp"
+         android:layout_height="wrap_content"
+         android:text="@string/string_preco"
+         android:id="@+id/txtPreco3"
+         android:textColor="@color/white"
+         android:layout_alignTop="@+id/txtNome3"
+         android:layout_alignStart="@+id/edtPreco2" />
+
+ <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAppearance="?android:attr/textAppearanceSmall"
+         android:text="Nome:"
+         android:id="@+id/txtNome3"
+         android:textColor="@color/white"
+         android:layout_below="@+id/edtNome2"
+         android:layout_alignParentStart="true" />
+
+ <EditText
+         android:layout_width="200dp"
+         android:layout_height="30dp"
+         android:ems="10"
+         android:id="@+id/edtNome4"
+         android:background="@color/white"
+         android:layout_below="@+id/txtNome4"
+         android:layout_alignParentStart="true"
+         android:inputType="textNoSuggestions|textVisiblePassword"/>
+
+ <EditText
+         android:layout_width="100dp"
+         android:layout_height="30dp"
+         android:id="@+id/edtPreco4"
+         android:background="@color/white"
+         android:layout_below="@+id/txtPreco4"
+         android:layout_alignParentEnd="true"
+         android:inputType="textNoSuggestions|number"/>
+
+ <TextView
+         android:layout_width="50dp"
+         android:layout_height="wrap_content"
+         android:text="@string/string_preco"
+         android:id="@+id/txtPreco4"
+         android:textColor="@color/white"
+         android:layout_alignTop="@+id/txtNome4"
+         android:layout_alignStart="@+id/edtPreco3" />
+
+ <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAppearance="?android:attr/textAppearanceSmall"
+         android:text="Nome:"
+         android:id="@+id/txtNome4"
+         android:textColor="@color/white"
+         android:layout_below="@+id/edtNome3"
+         android:layout_alignParentStart="true" />
+
+ <EditText
+         android:layout_width="200dp"
+         android:layout_height="30dp"
+         android:ems="10"
+         android:id="@+id/edtNome5"
+         android:background="@color/white"
+         android:layout_below="@+id/txtNome5"
+         android:layout_alignParentStart="true"
+         android:inputType="textNoSuggestions|textVisiblePassword"/>
+
+ <EditText
+         android:layout_width="100dp"
+         android:layout_height="30dp"
+         android:id="@+id/edtPreco5"
+         android:background="@color/white"
+         android:layout_below="@+id/txtPreco5"
+         android:layout_alignParentEnd="true"
+         android:inputType="textNoSuggestions|number"/>
+
+ <TextView
+         android:layout_width="50dp"
+         android:layout_height="wrap_content"
+         android:text="@string/string_preco"
+         android:id="@+id/txtPreco5"
+         android:textColor="@color/white"
+         android:layout_alignTop="@+id/txtNome5"
+         android:layout_alignStart="@+id/edtPreco4" />
+
+ <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAppearance="?android:attr/textAppearanceSmall"
+         android:text="Nome:"
+         android:id="@+id/txtNome5"
+         android:textColor="@color/white"
+         android:layout_below="@+id/edtNome4"
+         android:layout_alignParentStart="true" />
+
+ <EditText
+         android:layout_width="200dp"
+         android:layout_height="30dp"
+         android:ems="10"
+         android:id="@+id/edtNome6"
+         android:background="@color/white"
+         android:layout_below="@+id/txtNome6"
+         android:layout_alignParentStart="true"
+         android:inputType="textNoSuggestions|textVisiblePassword"/>
+
+ <EditText
+         android:layout_width="100dp"
+         android:layout_height="30dp"
+         android:id="@+id/edtPreco6"
+         android:background="@color/white"
+         android:layout_below="@+id/txtPreco6"
+         android:layout_alignStart="@+id/txtPreco6"
+         android:inputType="textNoSuggestions|number"/>
+
+ <TextView
+         android:layout_width="50dp"
+         android:layout_height="wrap_content"
+         android:text="@string/string_preco"
+         android:id="@+id/txtPreco6"
+         android:textColor="@color/white"
+         android:layout_below="@+id/edtPreco5"
+         android:layout_alignStart="@+id/edtPreco5" />
+
+ <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAppearance="?android:attr/textAppearanceSmall"
+         android:text="Nome:"
+         android:id="@+id/txtNome6"
+         android:textColor="@color/white"
+         android:layout_below="@+id/edtNome5"
+         android:layout_alignParentStart="true" />
+
+ <EditText
+         android:layout_width="200dp"
+         android:layout_height="30dp"
+         android:ems="10"
+         android:id="@+id/edtNome7"
+         android:background="@color/white"
+         android:layout_below="@+id/txtNome7"
+         android:layout_alignParentStart="true"
+         android:inputType="textNoSuggestions|textVisiblePassword"/>
+
+ <EditText
+         android:layout_width="100dp"
+         android:layout_height="30dp"
+         android:id="@+id/edtPreco7"
+         android:background="@color/white"
+         android:layout_below="@+id/txtPreco7"
+         android:layout_alignStart="@+id/txtPreco7"
+         android:inputType="textNoSuggestions|number"/>
+
+ <TextView
+         android:layout_width="50dp"
+         android:layout_height="wrap_content"
+         android:text="@string/string_preco"
+         android:id="@+id/txtPreco7"
+         android:textColor="@color/white"
+         android:layout_below="@+id/edtPreco6"
+         android:layout_alignStart="@+id/edtPreco6" />
+
+ <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAppearance="?android:attr/textAppearanceSmall"
+         android:text="Nome:"
+         android:id="@+id/txtNome7"
+         android:textColor="@color/white"
+         android:layout_below="@+id/edtNome6"
+         android:layout_alignParentStart="true" /> -->
+
+
+</RelativeLayout>

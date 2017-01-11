@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_redonded">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/bg_top_redonded"
+        android:padding="8dp"
+        android:id="@+id/header_menu_dialog">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MENU"
+            android:id="@+id/txt_dialog_menu"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/header_menu_dialog"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout"
+        android:background="@drawable/bg_redonded">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Compartilhar:"
+            android:id="@+id/txtErrorDialog"
+            android:textColor="@color/Black"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_whatsapp"
+            android:id="@+id/txt_whats_dialog"
+            android:layout_below="@+id/txtErrorDialog"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:clickable="true"
+            android:textColor="@color/Black"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView7"
+            android:src="@drawable/divider_horizontal"
+            android:layout_below="@+id/txt_whats_dialog"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facebook"
+            android:id="@+id/txt_face_dialog"
+            android:layout_below="@+id/txt_whats_dialog"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/Black"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:clickable="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView8"
+            android:src="@drawable/divider_horizontal"
+            android:layout_below="@+id/txt_face_dialog"
+            android:layout_alignStart="@+id/imageView7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alterar:"
+            android:id="@+id/textView12"
+            android:layout_alignTop="@+id/imageView8"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/Black"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alterar Titulo"
+            android:id="@+id/txt_change_title"
+            android:layout_below="@+id/textView12"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/Black"
+            android:clickable="true"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+       <!-- <ImageView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView9"
+            android:src="@drawable/divider_horizontal"
+            android:layout_below="@+id/txt_change_title"
+            android:layout_alignStart="@+id/imageView8" -->
+             />
+
+    </RelativeLayout>
+
+   <!-- <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="CONFIRMAR"
+        android:id="@+id/btnShareConfirm"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" /> -->
+</RelativeLayout>

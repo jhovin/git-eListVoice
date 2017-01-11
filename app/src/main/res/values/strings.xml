@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">eListVoice</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="string_item_list">%s</string>
+    <string name="string_num_item">%s</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
+    <string name="speech_prompt">Fale alguma coisa&#8230;</string>
+    <string name="facebook_app_id">370455716630235</string>
+    <string name="label_user">USUÁRIO</string>
+    <string name="label_senha">SENHA</string>
+    <string name="string_preco">Preço:</string>
+    <string name="action_logout">Logout</string>
+    <string name="label_addres">Endereço:</string>
+    <string name="label_login_erro">"Usuário ou senha incorretos!"</string>
+    <string name="label_whatsapp">Whatsapp</string>
+</resources>
